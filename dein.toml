@@ -1,5 +1,5 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo = 'w0rp/ale'
 hook_post_update = '''
   " エラー行に表示するマーク
   let g:ale_sign_error = '⨉'
