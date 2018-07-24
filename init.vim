@@ -1,8 +1,6 @@
-" 行数
 set number
-
 set noswapfile
-
+colorscheme ron
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
