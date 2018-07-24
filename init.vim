@@ -10,6 +10,9 @@ inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
 
+" For global replace(Variable rename)
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
 filetype indent on
 set tabstop=2
 set shiftwidth=2
