@@ -5,6 +5,10 @@ colorscheme ron
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 nmap <silent> <ESC><ESC> : pclose <CR>
 
+" tagbar
+" autocmd vimenter * Tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j

@@ -1,6 +1,16 @@
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'jsfaint/gen_tags.vim'
+hook = '''
+    let g:gen_tags#ctags_auto_gen = 1
+    let g:gen_tags#gtags_auto_gen = 1
+'''
+
 # [[plugins]]
 # repo = 'w0rp/ale'
 # hook = '''
