@@ -14,8 +14,8 @@ inoremap <silent> <C-k> k
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 filetype indent on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " プラグインがインストールされるディレクトリ
