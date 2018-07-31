@@ -2,7 +2,8 @@ set number
 set noswapfile
 colorscheme ron
 " close the preview window after inserting
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+nmap <silent> <ESC><ESC> : pclose <CR>
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
