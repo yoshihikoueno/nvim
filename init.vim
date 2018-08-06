@@ -23,6 +23,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+
 " プラグインがインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
