@@ -14,6 +14,8 @@ inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
+" Turn off paste mode when leaving insert
+autocmd InsertLeave * set nopaste
 
 " For global replace(Variable rename)
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
