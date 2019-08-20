@@ -45,7 +45,7 @@ if dein#load_state(s:dein_dir)
 
   " プラグインリストを収めた TOML ファイル
   " 予め TOML ファイルを用意しておく
-  let g:rc_dir    = expand("~/.config/nvim/")
+  let g:rc_dir    = expand('~/.config/nvim/')
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
@@ -58,6 +58,7 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
   call dein#install()
