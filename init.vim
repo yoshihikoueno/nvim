@@ -9,6 +9,9 @@ nmap <silent> <ESC><ESC> : pclose <CR>
 " autocmd vimenter * Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" set python3 prog
+let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
+
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
