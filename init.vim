@@ -12,6 +12,9 @@ nmap <F8> :TagbarToggle<CR>
 " set python3 prog
 let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
 
+" enable search by seletected text
+vnoremap // y/<C-R>"<CR>
+
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
