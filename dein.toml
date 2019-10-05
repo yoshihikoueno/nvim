@@ -17,6 +17,9 @@ repo = 'python-rope/ropevim'
 repo = 'idanarye/vim-vebugger'
 
 [[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
 repo = 'Shougo/vimproc'
 
 [[plugins]]
