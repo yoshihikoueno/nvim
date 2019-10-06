@@ -1,5 +1,8 @@
 [[plugins]]
 repo = 'lervag/vimtex'
+hook_add = '''
+    let g:vimtex_compiler_progname = 'nvr'
+'''
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -12,6 +15,9 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'rhysd/git-messenger.vim'
 
 [[plugins]]
 repo = 'python-rope/ropevim'
@@ -199,6 +205,19 @@ hook_add = '''
   call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
       \ [ '.git/', '.ropeproject/', '__pycache__/',
       \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+
+  " use floating window if possible
+  let s:denite_win_width_percent = 0.85
+  let s:denite_win_height_percent = 0.7
+
+  " Change denite default options
+  call denite#custom#option('default', {
+      \ 'split': 'floating',
+      \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+      \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+      \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+      \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+  \ })
 '''
 
 [[plugins]]
