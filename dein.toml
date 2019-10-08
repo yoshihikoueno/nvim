@@ -74,7 +74,7 @@ hook_add = '''
 repo = 'Vimjas/vim-python-pep8-indent'
 
 [[plugins]]
-repo = 'zchee/deoplete-jedi'
+repo = 'deoplete-plugins/deoplete-jedi'
 hook_add = '''
     let g:deoplete#sources#jedi#show_docstring = 1
 '''
