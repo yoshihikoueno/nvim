@@ -20,9 +20,6 @@ repo = 'tpope/vim-fugitive'
 repo = 'rhysd/git-messenger.vim'
 
 [[plugins]]
-repo = 'python-rope/ropevim'
-
-[[plugins]]
 repo = 'idanarye/vim-vebugger'
 
 [[plugins]]
