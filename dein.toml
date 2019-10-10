@@ -136,6 +136,8 @@ repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
+    map <C-j><C-i> :Denite file/rec<CR>i
+    map <C-j><C-o> :Denite grep:::!<CR>i
 	" Define mappings
 	autocmd FileType denite call s:denite_my_settings()
 	function! s:denite_my_settings() abort
@@ -281,6 +283,17 @@ hook_add = '''
 	call denite#custom#action('file', 'test2',
 	      \ {context -> denite#do_action(
 	      \  context, 'open', context['targets'])})
+let s:denite_win_width_percent = 0.85
+let s:denite_win_height_percent = 0.7
+
+" Change denite default options
+call denite#custom#option('default', {
+    \ 'split': 'floating',
+    \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+    \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+    \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+    \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+    \ })
 '''
 
 [[plugins]]
