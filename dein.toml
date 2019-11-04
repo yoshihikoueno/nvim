@@ -59,8 +59,10 @@ repo = 'w0rp/ale'
 hook_add = '''
   let g:ale_python_flake8_executable = g:python3_host_prog
   let g:ale_python_flake8_options = '-m flake8 --ignore=E501,E302,E701'
+  let g:ale_python_autopep8_executable = g:python3_host_prog
+  let g:ale_python_autopep8_options = '-m autopep8 --ignore W50,W690'
   let g:ale_fixers= {
-  \   'python': ['autopep8', 'black'],
+  \   'python': ['autopep8'],
   \}
   let g:ale_linters = {
   \   'python': ['flake8'],
