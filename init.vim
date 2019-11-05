@@ -9,6 +9,9 @@ nmap <silent> <ESC><ESC> : pclose <CR>
 " autocmd vimenter * Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" Add a key binding for terminal
+nmap <C-T><C-R> <ESC>:terminal<CR>:set nonumber<CR>i
+
 " set python3 prog
 let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
 
