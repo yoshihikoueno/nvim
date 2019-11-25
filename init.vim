@@ -26,6 +26,9 @@ inoremap <silent> <C-k> k
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
+" enable spell-checking
+autocmd FileType tex setlocal spell
+
 " For global replace(Variable rename)
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
