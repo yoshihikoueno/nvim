@@ -5,6 +5,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'tpope/vim-dispatch'
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
