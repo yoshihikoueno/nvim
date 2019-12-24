@@ -5,6 +5,12 @@ colorscheme ron
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 nmap <silent> <ESC><ESC> : pclose <CR>
 
+" Remember the cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
+
 " tagbar
 " autocmd vimenter * Tagbar
 nmap <F8> :TagbarToggle<CR>
