@@ -8,6 +8,9 @@ hook_add = '''
 repo = 'tpope/vim-dispatch'
 
 [[plugins]]
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]

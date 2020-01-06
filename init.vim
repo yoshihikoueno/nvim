@@ -81,3 +81,6 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 if dein#check_install()
   call dein#install()
 endif
+
+" temporary fix for the wrong js indentation
+autocmd FileType javascript set indentexpr=GetJavascriptIndent()-2
