@@ -24,6 +24,9 @@ let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
 " enable search by seletected text
 vnoremap // y/<C-R>"<CR>
 
+" split line at comma
+nnoremap <silent> ,, /,<CR>a<CR><ESC>:noh<CR>
+
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
