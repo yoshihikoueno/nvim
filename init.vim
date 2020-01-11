@@ -25,7 +25,12 @@ let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
 vnoremap // y/<C-R>"<CR>
 
 " split line at comma
-nnoremap <silent> ,, /,<CR>a<CR><ESC>:noh<CR>
+nnoremap <silent> ,, f,a<CR><ESC>
+
+" Disable ZQ
+nmap ZQ <NOP>
+
+nmap <silent> \w :w<CR>
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
