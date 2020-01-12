@@ -48,6 +48,7 @@ repo = 'tpope/vim-fugitive'
 hook_add = '''
     nnoremap <Space>go :G<CR>
     nnoremap <Space>gc :Gcommit<CR>
+    nnoremap <Space>gp :Gcommit<CR>
 '''
 
 [[plugins]]
