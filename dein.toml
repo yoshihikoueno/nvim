@@ -21,6 +21,7 @@ repo = 'mattn/emmet-vim'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 hook_add = '''
+    nnoremap <Space>c :CocCommand<CR>
     nmap <silent> gd <Plug>(coc-definition)
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> gi <Plug>(coc-implementation)
@@ -44,6 +45,10 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_add = '''
+    nnoremap <Space>go :G<CR>
+    nnoremap <Space>gc :Gcommit<CR>
+'''
 
 [[plugins]]
 repo = 'rhysd/git-messenger.vim'
