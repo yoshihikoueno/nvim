@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'jeffkreeftmeijer/vim-numbertoggle'
+
+[[plugins]]
 repo = 'janko/vim-test'
 hook_add = '''
     nmap <Space>t [vim-test]
