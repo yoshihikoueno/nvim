@@ -1,4 +1,16 @@
 [[plugins]]
+repo = 'janko/vim-test'
+hook_add = '''
+    nmap <Space>t [vim-test]
+    nmap [vim-test] <Nop>
+    nmap [vim-test]n :TestNearest<CR>
+    nmap [vim-test]f :TestFile<CR>
+    nmap [vim-test]s :TestSuite<CR>
+    nmap [vim-test]l :TestLast<CR>
+    nmap [vim-test]v :TestVisit<CR>
+'''
+
+[[plugins]]
 repo = 'lervag/vimtex'
 hook_add = '''
     let g:vimtex_compiler_progname = 'nvr'
@@ -46,9 +58,11 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
-    nnoremap <Space>go :G<CR>
-    nnoremap <Space>gc :Gcommit<CR>
-    nnoremap <Space>gp :Gcommit<CR>
+    nmap <Space>g [vim-fugitive]
+    nmap [vim-fugitive] <Nop>
+    nmap [vim-fugitive]o :G<CR>
+    nmap [vim-fugitive]c :Gcommit<CR>
+    nmap [vim-fugitive]p :Gpush<CR>
 '''
 
 [[plugins]]
