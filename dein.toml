@@ -155,8 +155,10 @@ hook_add= '''
             \ }
   nnoremap <Leader>q :<C-u>bw! \[quickrun\ output\]<CR>
 
+  command! -bar CloseQuickRunOutput bw! \[quickrun\ output\]
   " <Leader>t for the quick quick run. don't show the quick run result.
-  nnoremap <Leader>t :QuickRun<CR>:<C-u>bw! \[quickrun\ output\]<CR>
+  nnoremap <Leader>t :QuickRun<CR>:CloseQuickRunOutput<CR>
+  command! -bar RunWithouOutput call quickrun#run()|CloseQuickRunOutput
 '''
 
 [[plugins]]

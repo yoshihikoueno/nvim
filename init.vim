@@ -43,6 +43,11 @@ autocmd InsertLeave * set nopaste
 " enable spell-checking
 autocmd FileType tex setlocal spell
 
+" enable auto compile
+augroup TexAutoCompile
+    autocmd FileType tex :autocmd! TexAutoCompile BufWritePost <buffer> :RunWithouOutput
+augroup END
+
 " For global replace(Variable rename)
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
