@@ -5,6 +5,12 @@ colorscheme ron
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 nmap <silent> <ESC><ESC> : pclose <CR>
 
+" Remember the cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
+
 " tagbar
 " autocmd vimenter * Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -18,6 +24,14 @@ let g:python3_host_prog = $HOME."/.config/nvim/env/bin/python3"
 " enable search by seletected text
 vnoremap // y/<C-R>"<CR>
 
+" split line at comma
+nnoremap <silent> ,, f,a<CR><ESC>
+
+" Disable ZQ
+nmap ZQ <NOP>
+
+nmap <silent> \w :w<CR>
+
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
@@ -28,6 +42,11 @@ autocmd InsertLeave * set nopaste
 
 " enable spell-checking
 autocmd FileType tex setlocal spell
+
+" enable auto compile
+augroup TexAutoCompile
+    autocmd FileType tex :autocmd! TexAutoCompile BufWritePost <buffer> :RunWithouOutput
+augroup END
 
 " For global replace(Variable rename)
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
@@ -75,3 +94,6 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 if dein#check_install()
   call dein#install()
 endif
+
+" temporary fix for the wrong js indentation
+autocmd FileType javascript set indentexpr=GetJavascriptIndent()-2
