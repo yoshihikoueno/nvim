@@ -160,7 +160,7 @@ hook_add= '''
             \   'runner/terminal/closeonsuccess': 0,
   \}
 
-  command! -bar CloseQuickRunOutput ccl | execute Close_terminal() | silent! bw! \[quickrun\ output\]
+  command! -bar CloseQuickRunOutput ccl | call Close_quickrun_terminal() | silent! bw! \[quickrun\ output\]
   command! -bar RunWithouOutput call quickrun#run(g:quickrun_config.nooutput)
   command! -bar RunSticky call quickrun#run(g:quickrun_config.sticky)
 
