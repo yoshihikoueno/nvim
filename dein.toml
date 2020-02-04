@@ -156,16 +156,22 @@ hook_add= '''
   let g:quickrun_config["nooutput"] = {
             \   'runner/terminal/opener': "tabnew \[quickrun\ output\]",
   \}
+  let g:quickrun_config["nooutput_sticky"] = {
+            \   'runner/terminal/opener': "tabnew \[quickrun\ output\]",
+            \   'runner/terminal/closeonsuccess': 0,
+  \}
   let g:quickrun_config["sticky"] = {
             \   'runner/terminal/closeonsuccess': 0,
   \}
 
   command! -bar CloseQuickRunOutput ccl | call Close_quickrun_terminal() | silent! bw! \[quickrun\ output\]
   command! -bar RunWithouOutput call quickrun#run(g:quickrun_config.nooutput)
+  command! -bar RunWithouOutputSticky call quickrun#run(g:quickrun_config.nooutput_sticky)
   command! -bar RunSticky call quickrun#run(g:quickrun_config.sticky)
 
   nnoremap <Leader>q :CloseQuickRunOutput<CR>
   nnoremap <Leader>t :RunWithouOutput<CR>
+  nnoremap <Leader>T :RunWithouOutputSticky<CR>
   nnoremap <Leader>R :RunSticky<CR>
 '''
 
