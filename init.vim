@@ -1,5 +1,6 @@
 set number
 set noswapfile
+set ignorecase
 set smartcase
 colorscheme ron
 " close the preview window after inserting
