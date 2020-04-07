@@ -1,5 +1,6 @@
 set number
 set noswapfile
+set smartcase
 colorscheme ron
 " close the preview window after inserting
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
