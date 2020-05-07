@@ -77,13 +77,24 @@ hook_add = '''
 repo = 'rhysd/git-messenger.vim'
 
 [[plugins]]
-repo = 'idanarye/vim-vebugger'
-
-[[plugins]]
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'sakhnik/nvim-gdb'
+hook_add = '''
+    let g:nvimgdb_config_override = {
+      \ 'key_next': 'n',
+      \ 'key_step': 's',
+      \ 'key_finish': 'f',
+      \ 'key_continue': 'c',
+      \ 'key_until': 'u',
+      \ 'key_breakpoint': 'b',
+      \ 'set_tkeymaps': "NvimGdbNoTKeymaps",
+      \ }
+'''
 
 [[plugins]]
 repo = 'jsfaint/gen_tags.vim'
