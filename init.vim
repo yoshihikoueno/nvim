@@ -42,6 +42,9 @@ inoremap <silent> <C-k> k
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
+" set default tex type to LaTeX
+let g:tex_flavor = "latex"
+
 " enable spell-checking
 autocmd FileType tex setlocal spell
 
