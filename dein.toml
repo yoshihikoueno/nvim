@@ -243,7 +243,7 @@ hook_add = '''
 	call denite#custom#source(
 	\ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
 	call denite#custom#source(
-	\ 'file/rec', 'matchers', ['matcher/cpsm'])
+	\ 'file/rec', 'matchers', ['matcher/cpsm', 'matcher/ignore_globs'])
 
 	" Change sorters.
 	call denite#custom#source(
@@ -333,7 +333,7 @@ hook_add = '''
 	" Change ignore_globs
 	call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
 	      \ [ '.git/', '.ropeproject/', '__pycache__/',
-	      \   'venv/', 'env/', 'images/', '*.min.*', 'img/', 'fonts/'])
+	      \   'venv/', 'env/', 'images/', '*.min.*', 'img/', 'fonts/', 'node_modules/'])
 
 	" Custom action
 	" Note: lambda function is not supported in Vim8.
