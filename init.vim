@@ -61,6 +61,16 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+function SetSmallIndent()
+    set tabstop=2
+    set shiftwidth=2
+    set expandtab
+endfunction
+
+autocmd FileType javascript call SetSmallIndent()
+autocmd FileType vue call SetSmallIndent()
+autocmd FileType html call SetSmallIndent()
+
 
 " プラグインがインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
@@ -99,6 +109,3 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 if dein#check_install()
   call dein#install()
 endif
-
-" temporary fix for the wrong js indentation
-autocmd FileType javascript set indentexpr=GetJavascriptIndent()-2
