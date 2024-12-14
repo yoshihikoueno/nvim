@@ -1,6 +1,7 @@
 {
     "python.jediEnabled": false,
     "python.venvPath": "~/.config/nvim/env",
+    "suggest.noselect": true,
     "coc.preferences.rootPatterns": [".vim","env",".hg",".projections.json","git"],
     "tsserver.enableJavascript": true,
     "eslint.filetypes": [
