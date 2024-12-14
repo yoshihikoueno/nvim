@@ -2,7 +2,7 @@ set number
 set noswapfile
 set ignorecase
 set smartcase
-colorscheme ron
+colorscheme vim
 " close the preview window after inserting
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 nmap <silent> <ESC><ESC> : pclose <CR>
