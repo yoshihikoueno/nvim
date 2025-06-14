@@ -177,9 +177,6 @@ hook_add= '''
 '''
 
 [[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
