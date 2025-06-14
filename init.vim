@@ -109,3 +109,5 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 if dein#check_install()
   call dein#install()
 endif
+
+set mouse=
