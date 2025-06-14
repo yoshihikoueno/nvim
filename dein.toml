@@ -77,20 +77,6 @@ repo = 'scrooloose/nerdcommenter'
 repo = 'majutsushi/tagbar'
 
 [[plugins]]
-repo = 'sakhnik/nvim-gdb'
-hook_add = '''
-    let g:nvimgdb_config_override = {
-      \ 'key_next': 'n',
-      \ 'key_step': 's',
-      \ 'key_finish': 'f',
-      \ 'key_continue': 'c',
-      \ 'key_until': 'u',
-      \ 'key_breakpoint': 'b',
-      \ 'set_tkeymaps': "NvimGdbNoTKeymaps",
-      \ }
-'''
-
-[[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
   let g:ale_python_flake8_executable = g:python3_host_prog
