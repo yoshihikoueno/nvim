@@ -1,18 +1,4 @@
 [[plugins]]
-repo = 'janko/vim-test'
-hook_add = '''
-    let g:test#strategy = 'neovim'
-
-    nmap <Space>t [vim-test]
-    nmap [vim-test] <Nop>
-    nmap [vim-test]n :TestNearest<CR>
-    nmap [vim-test]f :TestFile<CR>
-    nmap [vim-test]s :TestSuite<CR>
-    nmap [vim-test]l :TestLast<CR>
-    nmap [vim-test]v :TestVisit<CR>
-'''
-
-[[plugins]]
 repo = 'lervag/vimtex'
 hook_add = '''
     let g:vimtex_compiler_progname = 'nvr'
