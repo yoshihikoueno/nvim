@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'jeffkreeftmeijer/vim-numbertoggle'
-
-[[plugins]]
 repo = 'janko/vim-test'
 hook_add = '''
     let g:test#strategy = 'neovim'
