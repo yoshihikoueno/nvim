@@ -13,9 +13,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'aliev/vim-compiler-python'
-
-[[plugins]]
 repo = 'lervag/vimtex'
 hook_add = '''
     let g:vimtex_compiler_progname = 'nvr'
